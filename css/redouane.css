@@ -22,6 +22,18 @@ body {
     font-family: "Cairo", sans-serif;
 }
 
+/* Scroller */
+
+.scroller {
+    background-color: var(--main-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 5px;
+    z-index: 9999;
+}
+
+
 a {
     text-decoration: none;
 }
@@ -991,6 +1003,7 @@ ul {
     top: 0;
     height: 100%;
     background-color: var(--main-color);
+    transition: 1.2s;
 }
 
 /* End Our-Skills */
