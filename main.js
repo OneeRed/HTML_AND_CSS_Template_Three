@@ -25,4 +25,29 @@ window.onscroll = function() {
         //     span.style.width = span.dataset.width;
         // });
     }
+    if (window.scrollY >= statsSection.offsetTop) {
+        if(!bool) {
+            numbers.forEach((el) => startCount(el));
+        }
+        bool = true;
+    }
+    
+}
+
+
+let numbers = document.querySelectorAll(".stats .box .number");
+let statsSection = document.querySelector(".stats");
+let bool = false;
+
+
+
+function startCount(el) {
+    // let goal = el.dataset.goal;
+    let goal = el.getAttribute("data-goal");
+    let counter = setInterval(() => {
+        el.textContent++;
+        if (el.textContent == goal) {
+            clearInterval(counter);
+        }
+    }, 2000 / goal);
 }
